@@ -1,0 +1,77 @@
+<!-- _@layout(/layout/basic/layout.html) -->
+<!--@css(/css/module/product/ruler_slider.css)-->
+<div class="ruler-slider-wrap">
+  <div class="ruler-slider-header">
+    <label for="ruler-slider" class="ruler-slider-label">수치: <span id="ruler-value">50</span></label>
+    <input type="range" id="ruler-slider" min="0" max="100" value="50" step="1">
+  </div>
+  <div class="ruler-box">
+    <canvas id="ruler-canvas" width="600" height="400"></canvas>
+  </div>
+</div>
+<!-- 상품 리스트를 숨겨서 DOM에 넣어둠 -->
+<div id="product-list" style="display:none">
+    {$product_list}
+</div>
+<script>
+const slider = document.getElementById('ruler-slider');
+const valueLabel = document.getElementById('ruler-value');
+const canvas = document.getElementById('ruler-canvas');
+const ctx = canvas.getContext('2d');
+
+function drawRuler(val) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Draw border
+  ctx.strokeStyle = '#bbb';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+  // Draw top ruler
+  for (let i = 0; i <= 60; i++) {
+    let x = i * 10;
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, i % 5 === 0 ? 20 : 10);
+    ctx.strokeStyle = '#888';
+    ctx.stroke();
+    if (i % 10 === 0) {
+      ctx.fillStyle = '#333';
+      ctx.font = '12px Arial';
+      ctx.fillText(i * (100/60), x+2, 32);
+    }
+  }
+  // Draw left ruler
+  for (let i = 0; i <= 40; i++) {
+    let y = i * 10;
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(i % 5 === 0 ? 20 : 10, y);
+    ctx.strokeStyle = '#888';
+    ctx.stroke();
+    if (i % 10 === 0) {
+      ctx.fillStyle = '#333';
+      ctx.font = '12px Arial';
+      ctx.fillText(i * (100/40), 24, y+4);
+    }
+  }
+  // Draw value indicator (center top)
+  ctx.beginPath();
+  ctx.moveTo(val * 6, 0);
+  ctx.lineTo(val * 6, 40);
+  ctx.strokeStyle = '#1976d2';
+  ctx.lineWidth = 3;
+  ctx.stroke();
+}
+
+slider.addEventListener('input', function() {
+  valueLabel.textContent = this.value;
+  drawRuler(Number(this.value));
+});
+drawRuler(Number(slider.value));
+
+// 상품 리스트 콘솔 출력
+window.addEventListener('DOMContentLoaded', function() {
+  const productListHtml = document.getElementById('product-list').innerHTML;
+  console.log('상품 전체 리스트 HTML:', productListHtml);
+});
+</script> 

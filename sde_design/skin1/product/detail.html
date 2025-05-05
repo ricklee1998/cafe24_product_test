@@ -573,10 +573,16 @@
                 <div class="{$action_display|display} action_button">
                     <span class="sub_sold {$soldout_display|display}">SOLD OUT</span>
                     <a href="#none" class="btnSubmit sizeL {$buy_display|display}" onclick="{$action_buy}"><span id="{$btn_buy_mobile_id}">Test Buy 1</span><span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span><span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">REGULAR DELIVERY</span></a>
-                    <button type="button" class="btnNormal sizeL actionCart {$basket_display|display}" onclick="{$action_basket}" id="actionCart">Test Cart</button>
-                    <button type="button" class="btnNormal sizeL actionWish {$wishlist_display|display}" onclick="{$action_wishlist}" id="actionWish">WISH LIST</button>
+                </div>
+                <div id="product-list" style="display:none">
+                    {$product_list}
+                </div>
+                <div id="product-detail-test" style="display:none">
+                    {$product_detail}
                 </div>
                 <div class="{$action_display|display} action_button mrt10">
+                    <button type="button" class="btnNormal sizeL actionCart {$basket_display|display}" onclick="{$action_basket}" id="actionCart">Test Cart</button>
+                    <button type="button" class="btnNormal sizeL actionWish {$wishlist_display|display}" onclick="{$action_wishlist}" id="actionWish">WISH LIST</button>
                     <button type="button" class="btnNormal sizeL {$basket_display|display}" id="compareProduct">Test 비교</button>
                 </div>
                 <div class="ec-base-button soldout {$action_soldout_display|display}">
@@ -917,4 +923,13 @@
         </div><!-- //detail_guide -->
     </div><!-- //prdInfo -->
 </div>
+
 <!--@define(cmc_log)-->
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        const productListHtml = document.getElementById('product-list').innerHTML;
+        console.log('상품 전체 리스트 HTML:', productListHtml);
+        const productHtml = document.getElementById('product-detail-test').innerHTML;
+        console.log('상품 리스트 HTML:', productHtml);
+    });
+</script>
