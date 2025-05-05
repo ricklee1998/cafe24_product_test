@@ -1,0 +1,104 @@
+/** subpage_theme05 (button_color - Ruddy Brown),(Webfont - LINE Seed) **/
+
+.theme05,
+.theme05 input,
+.theme05 select,
+.theme05 textarea,
+.theme05 code,
+.theme05 button {font-family:"LINESeedKR", sans-serif !important;}
+
+/* 버튼 */
+.theme05 .xans-product-action .action_button .sub_sold,
+.theme05 [class^='btnSubmit']:not(.disabled) {background:#B8672C;color:#fff;}
+.theme05 .xans-product-action .action_button .sub_sold:hover,
+.theme05 [class^='btnSubmit']:not(.disabled):hover {background-color:#B8672CB3;}
+.theme05 [class^='btnNormal']:not(.disabled),
+.theme05 .main_image_text_gallery_more .main_image_text_gallery_more_btn,
+.theme05 .more .btnMore {border:1px solid #ccc; color:#1c1c1c;text-decoration:none;}
+.theme05 [class^='btnNormal']:not(.disabled):hover,
+.theme05 [class^='btnNormal']:not(.disabled).selected,
+.theme05 .main_image_text_gallery_more .main_image_text_gallery_more_btn:hover,
+.theme05 .more .btnMore:hover{border-color:#B8672C;}
+
+/* 최상단 배너 */
+.theme05 .main_top_banner {background-color:#B8672C;}
+
+/* 상단 메뉴 */
+.theme05 #header .inner .top_nav_box .top_logo a {line-height:initial;}
+.theme05 #header .inner .top_nav_box .top_category > ul > li > a:after {background-color:#B8672C;}
+.theme05 #header .inner .top_nav_box .top_mypage a.xans-layout-orderbasketcount span {background-color:#B8672C;}
+
+/* 상품 진열 할인율 */
+.theme05 .xans-product-detail .infoArea table .sale_box,
+.theme05 .ec-base-product .prdList .thumbnail .sale_box {background-color:#B8672C;}
+
+/* 슬라이드바 */
+.theme05 .swiper-container .swiper-scrollbar {background:#FEF5E8;}
+.theme05 .swiper-container .swiper-scrollbar .swiper-scrollbar-drag {background:#B8672C;}
+.theme05 .swiper-pagination-bullet {background:#FEF5E8;opacity:1;}
+.theme05 .swiper-pagination-bullet-active {background:#B8672C;}
+
+/* 상품더보기 */
+.theme05 .more .btnMore:hover {background-color:#fff;border:1px solid #B8672C;}
+.theme05 .more .btnMore:hover > div {color:#b7b7b7;}
+.theme05 .more .btnMore:hover:after {background-color:#B8672C;}
+.theme05 .more .btnMore:after {background-color:#ccc;}
+
+/* 메인 탭상품 상품진열 */
+.theme05 .main_product_category .main_product_inner .main_product_tab li .button.active {border-color:#B8672C;}
+.theme05 .main_product_category .main_product_inner .main_product_tab li .button:after {background-color:#B8672C;}
+
+/* 메인 지도 */
+.theme05 .main_map .main_map_banner {background-color:#FEF5E8;}
+.theme05 .main_map .main_map_banner .main_map_banner_txt_box .main_long_banner_link a {background-color:#B8672C;border-color:transparent;color:#fff;}
+.theme05 .main_map .main_map_banner .main_map_banner_txt_box .main_long_banner_link a:hover {background-color:#B8672CB3;border-color:transparent;}
+.theme05 .main_map .main_map_banner .main_map_banner_txt_box .main_long_banner_link a:hover .icon[class*="icoPlus"]:before,
+.theme05 .main_map .main_map_banner .main_map_banner_txt_box .main_long_banner_link a:hover .icon[class*="icoPlus"]:after {background:#fff;}
+
+/* 하단 */
+.theme05 #footer {background:#FEF5E8;}
+
+/* 목록페이지 중분류 */
+.theme05 .ec-base-tab.typeMenu li.selected a.button {color:#B8672C;border:1px solid #B8672C;}
+
+/* 상세페이지 탭 */
+.theme05 .detail_tab li.tab_open {border:1px solid #B8672C; border-bottom:2px solid #fff;}
+.theme05 .detail_tab li.tab_open span {background-color:#B8672C;}
+
+/* 모바일 슬라이드 쇼핑정보 */
+.theme05 #aside .navigation_state2 {background-color:#B8672C;}
+.theme05 #aside .navigation_state2 ul li a {color:#fff;}
+
+/* 상품 추천신상품 뱃지 */
+.theme05 .ec-base-product .prdList .thumbnail .badge {background-color:#000;color:#fff;}
+
+/* 캐러셀 */
+.theme05 .smart-banner-bx-wrapper .bx-pager.bx-default-pager a {background:#FEF5E8 !important;}
+.theme05 .smart-banner-bx-wrapper .bx-pager.bx-default-pager a:hover, .theme05 .smart-banner-bx-wrapper .bx-pager.bx-default-pager a.active {background:#B8672C !important;} 
+.theme05 .ec-base-paginate.typeSwipe [id*='swipe-button'] button {background:#FEF5E8; opacity:1;}
+.theme05 .ec-base-paginate.typeSwipe [id*='swipe-button'] button.selected {background:#B8672C;}
+
+/* 메인 텍스트 박스 */
+.theme05 .main_text {background:#fafafa;}
+.theme05 .main_text .main_login_title,
+.theme05 .main_text .main_login_txt,
+.theme05 .main_text .main_text_link a {color:#1c1c1c;}
+.theme05 .main_text .main_text_link a {border-bottom-color:#1c1c1c;}
+
+/* 상품 wish, add 버튼 */
+.theme05 .ec-base-product .prdList .prdList__item .icon__box > span {color:#000;border:1px solid #999;}
+.theme05 .ec-base-product .prdList .prdList__item .icon__box > span:hover, 
+.theme05 .ec-base-product .prdList .prdList__item .icon__box > span.on {background-color:#000;border:1px solid #000;color:#fff;}
+
+/* 로고 - 디자인 폰트 (사이드바는 디자인에따라서 class 다르기때문에)*/
+.theme05  #header .inner .top_nav_box .top_logo a,
+.theme05  #footer .inner .bt_logo a,
+.theme05  #aside .navigation_member .side_logo a {
+  font-family: "Cafe24ClassicType-Regular";
+}
+.theme05  #aside .navigation-menu .slide_logo a {
+  font-family: "Cafe24ClassicType-Regular";
+}
+.theme05  #aside .navigation-menu .top_logo a {
+  font-family: "Cafe24ClassicType-Regular";
+}
